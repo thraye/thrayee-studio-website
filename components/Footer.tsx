@@ -20,10 +20,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#services" className="hover:text-gold transition">Services</a></li>
-              <li><a href="#portfolio" className="hover:text-gold transition">Portfolio</a></li>
-              <li><a href="#about" className="hover:text-gold transition">About</a></li>
-              <li><a href="#faq" className="hover:text-gold transition">FAQ</a></li>
+              <li><a href="#services" className="hover:text-gold transition" title="Services">Services</a></li>
+              <li><a href="#portfolio" className="hover:text-gold transition" title="Portfolio">Portfolio</a></li>
+              <li><a href="#about" className="hover:text-gold transition" title="About">About</a></li>
+              <li><a href="#faq" className="hover:text-gold transition" title="FAQ">FAQ</a></li>
             </ul>
           </div>
 
@@ -45,11 +45,11 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-2">
                 <Phone size={16} className="mt-1" />
-                <a href="tel:+919876543210" className="hover:text-gold transition">+91 9876 543 210</a>
+                <a href="tel:+919676943494" className="hover:text-gold transition" title="Call us">+91 9676 943 494</a>
               </div>
               <div className="flex items-start gap-2">
                 <Mail size={16} className="mt-1" />
-                <a href="mailto:info@thrayee.com" className="hover:text-gold transition">info@thrayee.com</a>
+                <a href="mailto:info@thrayeestudio.com" className="hover:text-gold transition" title="Email us">info@thrayeestudio.com</a>
               </div>
               <div className="flex items-start gap-2">
                 <MapPin size={16} className="mt-1" />
@@ -66,13 +66,13 @@ const Footer = () => {
               © 2024 Thrayee Studio. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
-              <a href="#" className="hover:text-gold transition" title="Instagram">
+              <a href="https://instagram.com/thrayeestudio" className="hover:text-gold transition" title="Instagram" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="hover:text-gold transition" title="YouTube">
+              <a href="https://youtube.com/@thrayeestudio" className="hover:text-gold transition" title="YouTube" aria-label="Subscribe on YouTube" target="_blank" rel="noopener noreferrer">
                 <Youtube size={20} />
               </a>
-              <a href="#" className="hover:text-gold transition" title="LinkedIn">
+              <a href="https://linkedin.com/company/thrayee-studio" className="hover:text-gold transition" title="LinkedIn" aria-label="Follow us on LinkedIn" target="_blank" rel="noopener noreferrer">
                 <Linkedin size={20} />
               </a>
             </div>

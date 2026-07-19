@@ -35,8 +35,8 @@ const Navigation = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-serif font-bold text-charcoal">
-            Thrayee
+          <Link href="/" className="text-2xl font-serif font-bold text-charcoal flex items-center gap-2">
+            <span>Thrayee</span>
           </Link>
 
           {/* Desktop Menu */}
@@ -55,22 +55,24 @@ const Navigation = () => {
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="tel:+919876543210"
+              href="tel:+919676943494"
               className="flex items-center gap-2 text-charcoal hover:text-olive transition-colors"
               title="Call us"
+              aria-label="Call Thrayee Studio at +91 9676 943 494"
             >
               <Phone size={18} />
             </a>
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/919676943494"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-charcoal hover:text-olive transition-colors"
               title="WhatsApp"
+              aria-label="WhatsApp Thrayee Studio"
             >
               <MessageCircle size={18} />
             </a>
-            <button className="btn btn-primary text-sm">
+            <button className="btn btn-primary text-sm" aria-label="Get consultation">
               Get Consultation
             </button>
           </div>
@@ -80,6 +82,7 @@ const Navigation = () => {
             className="md:hidden text-charcoal"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
+            aria-expanded={isOpen}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

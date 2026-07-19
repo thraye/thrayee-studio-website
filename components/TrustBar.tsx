@@ -1,14 +1,15 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
 import { CheckCircle2 } from 'lucide-react'
 
 const TrustBar = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  })
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  useEffect(() => {
+    setIsLoaded(true)
+  }, [])
 
   const trustItems = [
     { label: '100+ Projects', icon: '🏗️' },
@@ -39,12 +40,12 @@ const TrustBar = () => {
   }
 
   return (
-    <section ref={ref} className="bg-light-gray section-padding">
+    <section className="bg-light-gray section-padding">
       <div className="container-custom">
         <motion.div
           variants={containerVariants}
           initial="hidden"
-          animate={inView ? 'visible' : 'hidden'}
+          animate={isLoaded ? 'visible' : 'hidden'}
           className="grid grid-cols-1 md:grid-cols-5 gap-8"
         >
           {trustItems.map((item, index) => (

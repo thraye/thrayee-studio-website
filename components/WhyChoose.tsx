@@ -1,14 +1,15 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
 import { Sparkles, CheckCircle2, Eye, Users, Award, Zap } from 'lucide-react'
 
 const WhyChoose = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  })
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  useEffect(() => {
+    setIsLoaded(true)
+  }, [])
 
   const reasons = [
     { icon: Sparkles, title: 'Personalized Designs', desc: 'Tailored to your lifestyle and preferences' },
@@ -39,11 +40,11 @@ const WhyChoose = () => {
   }
 
   return (
-    <section id="about" ref={ref} className="section-padding bg-cream">
+    <section id="about" className="section-padding bg-cream">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -56,7 +57,7 @@ const WhyChoose = () => {
         <motion.div
           variants={containerVariants}
           initial="hidden"
-          animate={inView ? 'visible' : 'hidden'}
+          animate={isLoaded ? 'visible' : 'hidden'}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {reasons.map((reason, index) => {

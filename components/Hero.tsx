@@ -2,19 +2,16 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
 
 const Hero = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  })
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  useEffect(() => {
+    setIsLoaded(true)
+  }, [])
 
   return (
-    <section
-      ref={ref}
-      className="relative h-screen flex items-center justify-center overflow-hidden pt-20"
-    >
+    <section className="relative h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Image with Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -31,7 +28,7 @@ const Hero = () => {
       <div className="relative z-10 container-custom text-center text-white">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
           className="max-w-3xl mx-auto"
         >
@@ -57,7 +54,7 @@ const Hero = () => {
           {/* Trust Indicators */}
           <motion.div
             initial={{ opacity: 0 }}
-            animate={inView ? { opacity: 1 } : { opacity: 0 }}
+            animate={isLoaded ? { opacity: 1 } : { opacity: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
             className="flex flex-wrap items-center justify-center gap-6 text-sm"
           >

@@ -1,18 +1,17 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
 
 const StyleFinder = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  })
-
+  const [isLoaded, setIsLoaded] = useState(false)
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answers, setAnswers] = useState([])
   const [showResult, setShowResult] = useState(false)
+
+  useEffect(() => {
+    setIsLoaded(true)
+  }, [])
 
   const questions = [
     {
@@ -33,13 +32,6 @@ const StyleFinder = () => {
     },
   ]
 
-  const styles = {
-    'Modern': 'Contemporary, sleek designs with clean lines',
-    'Traditional': 'Classic elegance with timeless appeal',
-    'Minimal': 'Simplistic beauty with functional design',
-    'Luxury': 'Premium materials and sophisticated finishes',
-  }
-
   const handleAnswer = (option) => {
     const newAnswers = [...answers]
     newAnswers[currentQuestion] = option
@@ -59,11 +51,11 @@ const StyleFinder = () => {
   }
 
   return (
-    <section ref={ref} className="section-padding bg-warm-white">
+    <section className="section-padding bg-warm-white">
       <div className="container-custom max-w-2xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
@@ -73,7 +65,7 @@ const StyleFinder = () => {
 
         <motion.div
           initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : { opacity: 0 }}
+          animate={isLoaded ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.6 }}
           className="bg-cream p-8 rounded-lg"
         >
@@ -112,7 +104,7 @@ const StyleFinder = () => {
               <h3 className="text-2xl font-serif font-bold text-charcoal mb-3">Your Style: Modern Minimalist</h3>
               <p className="text-gray-600 mb-6">Contemporary, sleek designs with clean lines</p>
               <p className="text-gray-600 mb-8">Based on your preferences, we recommend exploring modern minimal designs that emphasize functionality and elegance.</p>
-              <div className="flex gap-4 justify-center">
+              <div className="flex gap-4 justify-center flex-wrap">
                 <button onClick={reset} className="btn btn-secondary">
                   Take Quiz Again
                 </button>

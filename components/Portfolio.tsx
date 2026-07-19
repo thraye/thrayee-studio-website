@@ -1,16 +1,15 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
-import { useState } from 'react'
 
 const Portfolio = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  })
-
+  const [isLoaded, setIsLoaded] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState('all')
+
+  useEffect(() => {
+    setIsLoaded(true)
+  }, [])
 
   const projects = [
     { category: 'modern', title: 'Modern Apartment', location: 'Kondapur', cost: '₹18 Lakhs', area: '1200 sq.ft', image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&h=400&fit=crop' },
@@ -27,11 +26,11 @@ const Portfolio = () => {
     : projects.filter(p => p.category === selectedCategory)
 
   return (
-    <section id="portfolio" ref={ref} className="section-padding bg-cream">
+    <section id="portfolio" className="section-padding bg-cream">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
@@ -63,7 +62,7 @@ const Portfolio = () => {
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group cursor-pointer"
             >

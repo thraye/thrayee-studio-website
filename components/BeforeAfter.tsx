@@ -1,16 +1,15 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
 
 const BeforeAfter = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  })
-
+  const [isLoaded, setIsLoaded] = useState(false)
   const [sliderPosition, setSliderPosition] = useState(50)
+
+  useEffect(() => {
+    setIsLoaded(true)
+  }, [])
 
   const beforeAfterPairs = [
     {
@@ -26,11 +25,11 @@ const BeforeAfter = () => {
   ]
 
   return (
-    <section ref={ref} className="section-padding bg-cream">
+    <section className="section-padding bg-cream">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
@@ -43,7 +42,7 @@ const BeforeAfter = () => {
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
             >
               <div className="relative h-96 overflow-hidden rounded-lg shadow-lg">

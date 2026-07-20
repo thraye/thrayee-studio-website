@@ -34,12 +34,10 @@ const Navigation = () => {
     >
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
           <Link href="/" className="text-2xl font-serif font-bold text-charcoal flex items-center gap-2">
             <span>Thrayee</span>
           </Link>
 
-          {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             {menuItems.map((item) => (
               <a
@@ -52,7 +50,6 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
             <a
               href="tel:+919676943494"
@@ -72,12 +69,17 @@ const Navigation = () => {
             >
               <MessageCircle size={18} />
             </a>
-            <button className="btn btn-primary text-sm" aria-label="Get consultation">
+            <a
+              href="https://wa.me/919676943494?text=Hi%20Thrayee%20Studio%2C%20I%20would%20like%20to%20book%20a%20consultation."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary text-sm"
+              aria-label="Get consultation on WhatsApp"
+            >
               Get Consultation
-            </button>
+            </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden text-charcoal"
             onClick={() => setIsOpen(!isOpen)}
@@ -88,7 +90,6 @@ const Navigation = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden bg-warm-white border-t border-light-gray py-4">
             {menuItems.map((item) => (
@@ -101,10 +102,21 @@ const Navigation = () => {
                 {item.label}
               </a>
             ))}
-            <div className="px-4 py-3 border-t border-light-gray mt-2">
-              <button className="btn btn-primary w-full text-sm">
-                Get Consultation
-              </button>
+            <div className="px-4 py-3 border-t border-light-gray mt-2 flex gap-2">
+              <a
+                href="tel:+919676943494"
+                className="btn w-1/2 text-sm border border-charcoal text-charcoal text-center"
+              >
+                Call
+              </a>
+              <a
+                href="https://wa.me/919676943494?text=Hi%20Thrayee%20Studio%2C%20I%20would%20like%20to%20book%20a%20consultation."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary w-1/2 text-sm text-center"
+              >
+                Consult
+              </a>
             </div>
           </div>
         )}

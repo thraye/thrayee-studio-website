@@ -12,44 +12,59 @@ const Services = () => {
 
   const services = [
     {
-      title: 'Living Room',
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&h=500&fit=crop',
-      description: 'Beautiful and functional living spaces',
+      title: 'Full Home Interiors',
+      image: '/portfolio/projects/Vasavi Residency/1.jpg',
+      description: 'Complete end-to-end interior design for your entire home',
     },
     {
-      title: 'Kitchen',
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&h=500&fit=crop',
-      description: 'Modular kitchens with premium finish',
+      title: 'Kitchen & Wardrobes',
+      image: '/portfolio/projects/Kompally 3BH Flat/10.jpg',
+      description: 'Modular kitchens and custom wardrobes with smart storage',
     },
     {
       title: 'Bedroom',
-      image: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=500&h=500&fit=crop',
+      image: '/portfolio/projects/Sri Divya Akhil Swapna CK Meadows-3BHK/4.jpg',
       description: 'Serene and comfortable bedroom designs',
     },
     {
-      title: 'Wardrobe',
-      image: 'https://images.unsplash.com/photo-1578500494198-246f612d03b3?w=500&h=500&fit=crop',
-      description: 'Custom wardrobes with smart storage',
-    },
-    {
       title: 'TV Unit',
-      image: 'https://images.unsplash.com/photo-1559028615-cd4628902d4a?w=500&h=500&fit=crop',
+      image: '/portfolio/projects/Anantha Residency/4.jpg',
       description: 'Modern TV units with integrated design',
     },
     {
+      title: 'Living Room Design',
+      image: '/portfolio/projects/Jayram Residence/8.jpg',
+      description: 'Beautiful and functional living spaces',
+    },
+    {
+      title: 'Commercial Spaces',
+      image: '/portfolio/projects/The Modular Company/1.jpg',
+      description: 'Functional and stylish interiors for commercial spaces',
+    },
+    {
+      title: 'Turnkey Projects',
+      image: '/portfolio/projects/Jayram Residence/1.jpg',
+      description: 'End-to-end turnkey project execution with zero hassle',
+    },
+    {
       title: 'False Ceiling',
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=500&fit=crop',
-      description: 'Elegant false ceilings with lighting',
+      image: '/portfolio/projects/Ashish Jubilee Hills Pent House/5.jpg',
+      description: 'Elegant false ceilings with integrated lighting',
     },
     {
       title: 'Dining',
-      image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&h=500&fit=crop',
+      image: '/portfolio/projects/Aparna Zenith 4BHK Flat/6.jpg',
       description: 'Sophisticated dining spaces',
     },
     {
       title: 'Balcony',
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=500&fit=crop',
+      image: '/portfolio/projects/Ashish Jubilee Hills Pent House/8.jpg',
       description: 'Outdoor balcony designs',
+    },
+    {
+      title: 'Renovation Services',
+      image: '/portfolio/projects/Reddy Residency/4.jpg',
+      description: 'Complete home renovation and remodeling services',
     },
   ]
 

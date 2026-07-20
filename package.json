@@ -4,6 +4,7 @@
   "description": "Premium Interior Design Website for Thrayee Studio, Hyderabad",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/generate-portfolio-manifest.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

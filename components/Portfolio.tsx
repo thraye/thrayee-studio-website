@@ -124,6 +124,7 @@ const Portfolio = () => {
   }, [isPaused, goNext, filteredProjects.length])
 
   const handleDragStart = (e: React.PointerEvent) => {
+    e.preventDefault()
     dragStartX.current = e.clientX
   }
 

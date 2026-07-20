@@ -65,6 +65,7 @@ const BeforeAfterSlider = ({ before, after, title, beforeIsPlaceholder }: Slider
 
   const onPointerMove = (e: React.PointerEvent) => {
     if (!isDragging.current) return
+    e.preventDefault()
     updatePosition(e.clientX)
   }
 
@@ -126,8 +127,8 @@ const BeforeAfterSlider = ({ before, after, title, beforeIsPlaceholder }: Slider
       <h3 className="text-xl font-serif font-bold text-charcoal mt-4">{title}</h3>
       {beforeIsPlaceholder && (
         <p className="text-sm text-gray-400 mt-1">
-          {/* TODO: Replace placeholder with a real AI-generated &quot;before&quot; image */}
-          Before image is a greyscale placeholder — see public/portfolio/before-placeholders/README.md
+          {/* TODO: Replace placeholder with a real AI-generated "before" image */}
+          Before image is a grayscale placeholder — see public/portfolio/before-placeholders/README.md
         </p>
       )}
     </motion.div>

@@ -13,7 +13,7 @@ const Services = () => {
   const services = [
     {
       title: 'Full Home Interiors',
-      image: '/portfolio/projects/Vasavi Residency/1.jpg',
+      image: '/portfolio/projects/Vasavi Residency/1.png',
       description: 'Complete end-to-end interior design for your entire home',
     },
     {
@@ -23,12 +23,12 @@ const Services = () => {
     },
     {
       title: 'Bedroom',
-      image: '/portfolio/projects/Sri Divya Akhil Swapna CK Meadows-3BHK/4.jpg',
+      image: '/portfolio/projects/Sri Divya Akhil Swapna CK Meadows-3BHK/4.JPG',
       description: 'Serene and comfortable bedroom designs',
     },
     {
       title: 'TV Unit',
-      image: '/portfolio/projects/Anantha Residency/4.jpg',
+      image: '/portfolio/projects/Anantha Residency/4.png',
       description: 'Modern TV units with integrated design',
     },
     {
@@ -38,7 +38,7 @@ const Services = () => {
     },
     {
       title: 'Commercial Spaces',
-      image: '/portfolio/projects/The Modular Company/1.jpg',
+      image: '/portfolio/projects/The Modular Company/1.png',
       description: 'Functional and stylish interiors for commercial spaces',
     },
     {
@@ -48,7 +48,7 @@ const Services = () => {
     },
     {
       title: 'False Ceiling',
-      image: '/portfolio/projects/Ashish Jubilee Hills Pent House/5.jpg',
+      image: '/portfolio/projects/Ashish Jubilee Hills Pent House/5.jpeg',
       description: 'Elegant false ceilings with integrated lighting',
     },
     {
@@ -58,12 +58,12 @@ const Services = () => {
     },
     {
       title: 'Balcony',
-      image: '/portfolio/projects/Ashish Jubilee Hills Pent House/8.jpg',
+      image: '/portfolio/projects/Ashish Jubilee Hills Pent House/8.jpeg',
       description: 'Outdoor balcony designs',
     },
     {
       title: 'Renovation Services',
-      image: '/portfolio/projects/Reddy Residency/4.jpg',
+      image: '/portfolio/projects/Reddy Residency/4.png',
       description: 'Complete home renovation and remodeling services',
     },
   ]

@@ -17,7 +17,7 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
-            'url(https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1400&h=900&fit=crop)',
+            "url('/portfolio/projects/Vasavi Residency/1.png')",
           backgroundAttachment: 'fixed',
         }}
       >
@@ -43,12 +43,17 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <button className="btn btn-primary px-8">
+            <a href="#contact" className="btn btn-primary px-8">
               Get Free Consultation
-            </button>
-            <button className="btn btn-secondary px-8 text-white border-white hover:bg-white hover:text-charcoal">
+            </a>
+            <a
+              href="/portfolio/THRAYEE STUDIO PORTFOLIO.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary px-8 text-white border-white hover:bg-white hover:text-charcoal"
+            >
               View Portfolio
-            </button>
+            </a>
           </div>
 
           {/* Trust Indicators */}

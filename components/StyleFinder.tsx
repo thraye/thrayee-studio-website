@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 const StyleFinder = () => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [currentQuestion, setCurrentQuestion] = useState(0)
-  const [answers, setAnswers] = useState([])
+  const [answers, setAnswers] = useState<string[]>([])
   const [showResult, setShowResult] = useState(false)
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const StyleFinder = () => {
     },
   ]
 
-  const handleAnswer = (option) => {
+  const handleAnswer = (option: string) => {
     const newAnswers = [...answers]
     newAnswers[currentQuestion] = option
     setAnswers(newAnswers)

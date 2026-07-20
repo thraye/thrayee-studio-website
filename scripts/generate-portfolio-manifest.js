@@ -22,8 +22,8 @@ const manifest = folders.map((folder) => {
     .readdirSync(folderPath)
     .filter((f) => IMAGE_EXTS.test(f))
     .sort((a, b) => {
-      const numA = parseInt(a, 10)
-      const numB = parseInt(b, 10)
+      const numA = parseInt(a.match(/^(\d+)/)?.[1] ?? '', 10)
+      const numB = parseInt(b.match(/^(\d+)/)?.[1] ?? '', 10)
       if (!isNaN(numA) && !isNaN(numB)) return numA - numB
       return a.localeCompare(b)
     })

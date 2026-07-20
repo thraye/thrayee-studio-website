@@ -25,6 +25,7 @@ export default function ProjectCarousel({ images, alt, cardIndex = 0 }: ProjectC
   const [direction, setDirection] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
   const dragStartX = useRef(0)
+  const dragStartY = useRef(0)
   const isDragging = useRef(false)
   const containerRef = useRef<HTMLDivElement>(null)
   const isInViewRef = useRef(false)
@@ -70,14 +71,17 @@ export default function ProjectCarousel({ images, alt, cardIndex = 0 }: ProjectC
   const handlePointerDown = (e: React.PointerEvent) => {
     isDragging.current = true
     dragStartX.current = e.clientX
+    dragStartY.current = e.clientY
   }
 
   const handlePointerUp = (e: React.PointerEvent) => {
     if (!isDragging.current) return
     isDragging.current = false
-    const diff = dragStartX.current - e.clientX
-    if (Math.abs(diff) > 50) {
-      diff > 0 ? goNext() : goPrev()
+    const diffX = dragStartX.current - e.clientX
+    const diffY = dragStartY.current - e.clientY
+    // Only treat as a horizontal swipe when horizontal movement dominates
+    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+      diffX > 0 ? goNext() : goPrev()
     }
   }
 
@@ -97,7 +101,7 @@ export default function ProjectCarousel({ images, alt, cardIndex = 0 }: ProjectC
       onPointerDown={handlePointerDown}
       onPointerUp={handlePointerUp}
     >
-      <AnimatePresence initial={false} custom={direction} mode="wait">
+      <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={currentIndex}
           custom={direction}

@@ -75,11 +75,20 @@ export default function BeforeAfterSlider({
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
+      {beforeIsPlaceholder && (
+        <p id={`before-notice-${title.replace(/\s+/g, '-')}`} className="sr-only">
+          The "before" image is a visual placeholder using a grayscale and blur filter on the same
+          photo as the "after" image. A real AI-generated before photo will replace it later.
+        </p>
+      )}
       {/* Comparison area */}
       <div
         ref={containerRef}
         role="slider"
         aria-label={`Before and after comparison for ${title}. Use left/right arrow keys to adjust.`}
+        aria-describedby={
+          beforeIsPlaceholder ? `before-notice-${title.replace(/\s+/g, '-')}` : undefined
+        }
         aria-valuenow={Math.round(position)}
         aria-valuemin={0}
         aria-valuemax={100}

@@ -30,6 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Thrayee Studio - Premium Interior Design',
     description: 'Thrayee Studio designs premium interior spaces for Hyderabad homes. Designing beyond walls.',
+    type: 'website',
     locale: 'en_IN',
     url: 'https://thrayeestudio.com',
     siteName: 'Thrayee Studio',
@@ -46,6 +47,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Thrayee Studio - Premium Interior Design',
     description: 'Thrayee Studio designs premium interior spaces for Hyderabad homes. Designing beyond walls.',
+    creator: '@thrayeestudio',
     images: ['/brand/og-image.png'],
   },
   appleWebApp: {

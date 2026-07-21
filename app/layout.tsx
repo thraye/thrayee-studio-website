@@ -11,7 +11,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: 'Thrayee Studio - Premium Interior Design Hyderabad',
-  description: 'Thrayee Studio creates premium architecture, landscape, and interior design solutions for apartments, villas, and homes in Hyderabad.',
+  description: 'Thrayee Studio creates premium interior design solutions for apartments, villas, and homes in Hyderabad. Designing beyond walls.',
   keywords: 'interior design hyderabad, home interior design, apartment interiors, villa design, modular kitchen, false ceiling',
   metadataBase: new URL('https://thrayeestudio.com'),
   applicationName: 'Thrayee Studio',
@@ -29,8 +29,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Thrayee Studio - Premium Interior Design',
-    description: 'Thrayee Studio designs refined architecture, landscape, and interior spaces for Hyderabad homes.',
-    type: 'website',
+    description: 'Thrayee Studio designs premium interior spaces for Hyderabad homes. Designing beyond walls.',
     locale: 'en_IN',
     url: 'https://thrayeestudio.com',
     siteName: 'Thrayee Studio',
@@ -46,8 +45,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Thrayee Studio - Premium Interior Design',
-    description: 'Thrayee Studio designs refined architecture, landscape, and interior spaces for Hyderabad homes.',
-    creator: '@thrayeestudio',
+    description: 'Thrayee Studio designs premium interior spaces for Hyderabad homes. Designing beyond walls.',
     images: ['/brand/og-image.png'],
   },
   appleWebApp: {

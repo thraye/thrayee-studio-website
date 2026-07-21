@@ -44,10 +44,13 @@ const Hero = () => {
           <h1 className="heading-xl mb-6 text-white">
             Designed Around Your Lifestyle
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-gray-100 font-light">
+          <p className="text-xl md:text-2xl mb-4 text-gray-100 font-light">
             Premium Interior Design for Hyderabad Homes.
             <br />
             Beautiful. Functional. Built to Last.
+          </p>
+          <p className="text-base md:text-lg mb-8 text-gold/90 italic font-light tracking-wide">
+            Designing beyond walls
           </p>
 
           {/* CTA Buttons */}

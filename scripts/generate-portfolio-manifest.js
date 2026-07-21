@@ -9,7 +9,11 @@ const path = require('path')
 const projectsDir = path.join(process.cwd(), 'public', 'portfolio', 'projects')
 const outputPath = path.join(process.cwd(), 'lib', 'portfolioManifest.ts')
 
-const IMAGE_EXTS = /\.(jpg|jpeg|png|webp|avif|JPG|JPEG|PNG|WEBP|AVIF)$/
+const IMAGE_EXTS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.avif', '.gif'])
+const filenameSorter = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' })
+
+const toPublicPath = (...segments) =>
+  `/portfolio/projects/${segments.map((segment) => encodeURIComponent(segment)).join('/')}`
 
 const folders = fs
   .readdirSync(projectsDir)
@@ -19,15 +23,15 @@ const folders = fs
 const manifest = folders.map((folder) => {
   const folderPath = path.join(projectsDir, folder)
   const files = fs
-    .readdirSync(folderPath)
-    .filter((f) => IMAGE_EXTS.test(f))
-    .sort((a, b) => {
-      const numA = parseInt(a.match(/^(\d+)/)?.[1] ?? '', 10)
-      const numB = parseInt(b.match(/^(\d+)/)?.[1] ?? '', 10)
-      if (!isNaN(numA) && !isNaN(numB)) return numA - numB
-      return a.localeCompare(b)
-    })
-    .map((f) => `/portfolio/projects/${folder}/${f}`)
+    .readdirSync(folderPath, { withFileTypes: true })
+    .filter((entry) => entry.isFile() && IMAGE_EXTS.has(path.extname(entry.name).toLowerCase()))
+    .map((entry) => entry.name)
+    .sort((a, b) => filenameSorter.compare(a, b))
+    .map((filename) => toPublicPath(folder, filename))
+
+  if (files.length === 0) {
+    console.warn(`⚠️  No images found in portfolio project folder: "${folder}"`)
+  }
 
   return { title: folder, images: files }
 })

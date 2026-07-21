@@ -10,188 +10,188 @@ const portfolioManifest: ProjectImageManifest[] = [
   {
     "title": "Anantha Residency",
     "images": [
-      "/portfolio/projects/Anantha Residency/1.png",
-      "/portfolio/projects/Anantha Residency/2.png",
-      "/portfolio/projects/Anantha Residency/3.png",
-      "/portfolio/projects/Anantha Residency/4.png",
-      "/portfolio/projects/Anantha Residency/5.png"
+      "/portfolio/projects/Anantha%20Residency/1.png",
+      "/portfolio/projects/Anantha%20Residency/2.png",
+      "/portfolio/projects/Anantha%20Residency/3.png",
+      "/portfolio/projects/Anantha%20Residency/4.png",
+      "/portfolio/projects/Anantha%20Residency/5.png"
     ]
   },
   {
     "title": "Aparna Zenith 3BHK Flat",
     "images": [
-      "/portfolio/projects/Aparna Zenith 3BHK Flat/1.jpg",
-      "/portfolio/projects/Aparna Zenith 3BHK Flat/2.jpg",
-      "/portfolio/projects/Aparna Zenith 3BHK Flat/3.jpg",
-      "/portfolio/projects/Aparna Zenith 3BHK Flat/4.jpg",
-      "/portfolio/projects/Aparna Zenith 3BHK Flat/5.jpg",
-      "/portfolio/projects/Aparna Zenith 3BHK Flat/6.jpg",
-      "/portfolio/projects/Aparna Zenith 3BHK Flat/7.jpg",
-      "/portfolio/projects/Aparna Zenith 3BHK Flat/8.jpg",
-      "/portfolio/projects/Aparna Zenith 3BHK Flat/9.jpg",
-      "/portfolio/projects/Aparna Zenith 3BHK Flat/10.jpg",
-      "/portfolio/projects/Aparna Zenith 3BHK Flat/11.jpg",
-      "/portfolio/projects/Aparna Zenith 3BHK Flat/12.jpg",
-      "/portfolio/projects/Aparna Zenith 3BHK Flat/13.jpg",
-      "/portfolio/projects/Aparna Zenith 3BHK Flat/14.jpg"
+      "/portfolio/projects/Aparna%20Zenith%203BHK%20Flat/1.jpg",
+      "/portfolio/projects/Aparna%20Zenith%203BHK%20Flat/2.jpg",
+      "/portfolio/projects/Aparna%20Zenith%203BHK%20Flat/3.jpg",
+      "/portfolio/projects/Aparna%20Zenith%203BHK%20Flat/4.jpg",
+      "/portfolio/projects/Aparna%20Zenith%203BHK%20Flat/5.jpg",
+      "/portfolio/projects/Aparna%20Zenith%203BHK%20Flat/6.jpg",
+      "/portfolio/projects/Aparna%20Zenith%203BHK%20Flat/7.jpg",
+      "/portfolio/projects/Aparna%20Zenith%203BHK%20Flat/8.jpg",
+      "/portfolio/projects/Aparna%20Zenith%203BHK%20Flat/9.jpg",
+      "/portfolio/projects/Aparna%20Zenith%203BHK%20Flat/10.jpg",
+      "/portfolio/projects/Aparna%20Zenith%203BHK%20Flat/11.jpg",
+      "/portfolio/projects/Aparna%20Zenith%203BHK%20Flat/12.jpg",
+      "/portfolio/projects/Aparna%20Zenith%203BHK%20Flat/13.jpg",
+      "/portfolio/projects/Aparna%20Zenith%203BHK%20Flat/14.jpg"
     ]
   },
   {
     "title": "Aparna Zenith 4BHK Flat",
     "images": [
-      "/portfolio/projects/Aparna Zenith 4BHK Flat/1.jpg",
-      "/portfolio/projects/Aparna Zenith 4BHK Flat/2.jpg",
-      "/portfolio/projects/Aparna Zenith 4BHK Flat/3.jpg",
-      "/portfolio/projects/Aparna Zenith 4BHK Flat/4.jpg",
-      "/portfolio/projects/Aparna Zenith 4BHK Flat/5.jpg",
-      "/portfolio/projects/Aparna Zenith 4BHK Flat/6.jpg",
-      "/portfolio/projects/Aparna Zenith 4BHK Flat/7.jpg",
-      "/portfolio/projects/Aparna Zenith 4BHK Flat/8.jpg",
-      "/portfolio/projects/Aparna Zenith 4BHK Flat/10.jpg",
-      "/portfolio/projects/Aparna Zenith 4BHK Flat/11.jpg",
-      "/portfolio/projects/Aparna Zenith 4BHK Flat/12.jpg",
-      "/portfolio/projects/Aparna Zenith 4BHK Flat/13.jpg",
-      "/portfolio/projects/Aparna Zenith 4BHK Flat/14.jpg",
-      "/portfolio/projects/Aparna Zenith 4BHK Flat/15.jpg",
-      "/portfolio/projects/Aparna Zenith 4BHK Flat/16.jpg",
-      "/portfolio/projects/Aparna Zenith 4BHK Flat/17.jpg",
-      "/portfolio/projects/Aparna Zenith 4BHK Flat/18.jpg",
-      "/portfolio/projects/Aparna Zenith 4BHK Flat/19.jpg",
-      "/portfolio/projects/Aparna Zenith 4BHK Flat/20.jpg",
-      "/portfolio/projects/Aparna Zenith 4BHK Flat/21.jpg"
+      "/portfolio/projects/Aparna%20Zenith%204BHK%20Flat/1.jpg",
+      "/portfolio/projects/Aparna%20Zenith%204BHK%20Flat/2.jpg",
+      "/portfolio/projects/Aparna%20Zenith%204BHK%20Flat/3.jpg",
+      "/portfolio/projects/Aparna%20Zenith%204BHK%20Flat/4.jpg",
+      "/portfolio/projects/Aparna%20Zenith%204BHK%20Flat/5.jpg",
+      "/portfolio/projects/Aparna%20Zenith%204BHK%20Flat/6.jpg",
+      "/portfolio/projects/Aparna%20Zenith%204BHK%20Flat/7.jpg",
+      "/portfolio/projects/Aparna%20Zenith%204BHK%20Flat/8.jpg",
+      "/portfolio/projects/Aparna%20Zenith%204BHK%20Flat/10.jpg",
+      "/portfolio/projects/Aparna%20Zenith%204BHK%20Flat/11.jpg",
+      "/portfolio/projects/Aparna%20Zenith%204BHK%20Flat/12.jpg",
+      "/portfolio/projects/Aparna%20Zenith%204BHK%20Flat/13.jpg",
+      "/portfolio/projects/Aparna%20Zenith%204BHK%20Flat/14.jpg",
+      "/portfolio/projects/Aparna%20Zenith%204BHK%20Flat/15.jpg",
+      "/portfolio/projects/Aparna%20Zenith%204BHK%20Flat/16.jpg",
+      "/portfolio/projects/Aparna%20Zenith%204BHK%20Flat/17.jpg",
+      "/portfolio/projects/Aparna%20Zenith%204BHK%20Flat/18.jpg",
+      "/portfolio/projects/Aparna%20Zenith%204BHK%20Flat/19.jpg",
+      "/portfolio/projects/Aparna%20Zenith%204BHK%20Flat/20.jpg",
+      "/portfolio/projects/Aparna%20Zenith%204BHK%20Flat/21.jpg"
     ]
   },
   {
     "title": "Ashish Jubilee Hills Pent House",
     "images": [
-      "/portfolio/projects/Ashish Jubilee Hills Pent House/1.jpeg",
-      "/portfolio/projects/Ashish Jubilee Hills Pent House/2.jpeg",
-      "/portfolio/projects/Ashish Jubilee Hills Pent House/3.jpeg",
-      "/portfolio/projects/Ashish Jubilee Hills Pent House/4.jpeg",
-      "/portfolio/projects/Ashish Jubilee Hills Pent House/5.jpeg",
-      "/portfolio/projects/Ashish Jubilee Hills Pent House/6.jpeg",
-      "/portfolio/projects/Ashish Jubilee Hills Pent House/7.jpeg",
-      "/portfolio/projects/Ashish Jubilee Hills Pent House/8.jpeg",
-      "/portfolio/projects/Ashish Jubilee Hills Pent House/9.jpeg",
-      "/portfolio/projects/Ashish Jubilee Hills Pent House/10.jpeg"
+      "/portfolio/projects/Ashish%20Jubilee%20Hills%20Pent%20House/1.jpeg",
+      "/portfolio/projects/Ashish%20Jubilee%20Hills%20Pent%20House/2.jpeg",
+      "/portfolio/projects/Ashish%20Jubilee%20Hills%20Pent%20House/3.jpeg",
+      "/portfolio/projects/Ashish%20Jubilee%20Hills%20Pent%20House/4.jpeg",
+      "/portfolio/projects/Ashish%20Jubilee%20Hills%20Pent%20House/5.jpeg",
+      "/portfolio/projects/Ashish%20Jubilee%20Hills%20Pent%20House/6.jpeg",
+      "/portfolio/projects/Ashish%20Jubilee%20Hills%20Pent%20House/7.jpeg",
+      "/portfolio/projects/Ashish%20Jubilee%20Hills%20Pent%20House/8.jpeg",
+      "/portfolio/projects/Ashish%20Jubilee%20Hills%20Pent%20House/9.jpeg",
+      "/portfolio/projects/Ashish%20Jubilee%20Hills%20Pent%20House/10.jpeg"
     ]
   },
   {
     "title": "Jayram Residence",
     "images": [
-      "/portfolio/projects/Jayram Residence/1.jpg",
-      "/portfolio/projects/Jayram Residence/2.jpg",
-      "/portfolio/projects/Jayram Residence/3.jpg",
-      "/portfolio/projects/Jayram Residence/4.jpg",
-      "/portfolio/projects/Jayram Residence/5.jpg",
-      "/portfolio/projects/Jayram Residence/6.jpg",
-      "/portfolio/projects/Jayram Residence/7.jpg",
-      "/portfolio/projects/Jayram Residence/8.jpg",
-      "/portfolio/projects/Jayram Residence/9.jpg"
+      "/portfolio/projects/Jayram%20Residence/1.jpg",
+      "/portfolio/projects/Jayram%20Residence/2.jpg",
+      "/portfolio/projects/Jayram%20Residence/3.jpg",
+      "/portfolio/projects/Jayram%20Residence/4.jpg",
+      "/portfolio/projects/Jayram%20Residence/5.jpg",
+      "/portfolio/projects/Jayram%20Residence/6.jpg",
+      "/portfolio/projects/Jayram%20Residence/7.jpg",
+      "/portfolio/projects/Jayram%20Residence/8.jpg",
+      "/portfolio/projects/Jayram%20Residence/9.jpg"
     ]
   },
   {
     "title": "Kompally 3BH Flat",
     "images": [
-      "/portfolio/projects/Kompally 3BH Flat/1.jpg",
-      "/portfolio/projects/Kompally 3BH Flat/2.jpg",
-      "/portfolio/projects/Kompally 3BH Flat/3.jpg",
-      "/portfolio/projects/Kompally 3BH Flat/4.jpg",
-      "/portfolio/projects/Kompally 3BH Flat/5.jpg",
-      "/portfolio/projects/Kompally 3BH Flat/6.jpg",
-      "/portfolio/projects/Kompally 3BH Flat/7.jpg",
-      "/portfolio/projects/Kompally 3BH Flat/8.jpg",
-      "/portfolio/projects/Kompally 3BH Flat/9.jpg",
-      "/portfolio/projects/Kompally 3BH Flat/10.jpg",
-      "/portfolio/projects/Kompally 3BH Flat/11.jpg",
-      "/portfolio/projects/Kompally 3BH Flat/12.jpg",
-      "/portfolio/projects/Kompally 3BH Flat/13.jpg",
-      "/portfolio/projects/Kompally 3BH Flat/14.jpg",
-      "/portfolio/projects/Kompally 3BH Flat/15.jpg",
-      "/portfolio/projects/Kompally 3BH Flat/16.jpg",
-      "/portfolio/projects/Kompally 3BH Flat/17.jpg",
-      "/portfolio/projects/Kompally 3BH Flat/18.jpg",
-      "/portfolio/projects/Kompally 3BH Flat/19.jpg"
+      "/portfolio/projects/Kompally%203BH%20Flat/1.jpg",
+      "/portfolio/projects/Kompally%203BH%20Flat/2.jpg",
+      "/portfolio/projects/Kompally%203BH%20Flat/3.jpg",
+      "/portfolio/projects/Kompally%203BH%20Flat/4.jpg",
+      "/portfolio/projects/Kompally%203BH%20Flat/5.jpg",
+      "/portfolio/projects/Kompally%203BH%20Flat/6.jpg",
+      "/portfolio/projects/Kompally%203BH%20Flat/7.jpg",
+      "/portfolio/projects/Kompally%203BH%20Flat/8.jpg",
+      "/portfolio/projects/Kompally%203BH%20Flat/9.jpg",
+      "/portfolio/projects/Kompally%203BH%20Flat/10.jpg",
+      "/portfolio/projects/Kompally%203BH%20Flat/11.jpg",
+      "/portfolio/projects/Kompally%203BH%20Flat/12.jpg",
+      "/portfolio/projects/Kompally%203BH%20Flat/13.jpg",
+      "/portfolio/projects/Kompally%203BH%20Flat/14.jpg",
+      "/portfolio/projects/Kompally%203BH%20Flat/15.jpg",
+      "/portfolio/projects/Kompally%203BH%20Flat/16.jpg",
+      "/portfolio/projects/Kompally%203BH%20Flat/17.jpg",
+      "/portfolio/projects/Kompally%203BH%20Flat/18.jpg",
+      "/portfolio/projects/Kompally%203BH%20Flat/19.jpg"
     ]
   },
   {
     "title": "Lansum Etania 3BHK Flat",
     "images": [
-      "/portfolio/projects/Lansum Etania 3BHK Flat/1.jpg",
-      "/portfolio/projects/Lansum Etania 3BHK Flat/2.jpg",
-      "/portfolio/projects/Lansum Etania 3BHK Flat/3.jpg",
-      "/portfolio/projects/Lansum Etania 3BHK Flat/4.jpg",
-      "/portfolio/projects/Lansum Etania 3BHK Flat/5.jpg",
-      "/portfolio/projects/Lansum Etania 3BHK Flat/6.jpg",
-      "/portfolio/projects/Lansum Etania 3BHK Flat/7.jpg",
-      "/portfolio/projects/Lansum Etania 3BHK Flat/8.jpg",
-      "/portfolio/projects/Lansum Etania 3BHK Flat/9.jpg",
-      "/portfolio/projects/Lansum Etania 3BHK Flat/10.jpg",
-      "/portfolio/projects/Lansum Etania 3BHK Flat/11.jpg",
-      "/portfolio/projects/Lansum Etania 3BHK Flat/12.jpg",
-      "/portfolio/projects/Lansum Etania 3BHK Flat/13.jpg",
-      "/portfolio/projects/Lansum Etania 3BHK Flat/14.jpg",
-      "/portfolio/projects/Lansum Etania 3BHK Flat/15.jpg",
-      "/portfolio/projects/Lansum Etania 3BHK Flat/16.jpg",
-      "/portfolio/projects/Lansum Etania 3BHK Flat/17.jpg",
-      "/portfolio/projects/Lansum Etania 3BHK Flat/18.jpg"
+      "/portfolio/projects/Lansum%20Etania%203BHK%20Flat/1.jpg",
+      "/portfolio/projects/Lansum%20Etania%203BHK%20Flat/2.jpg",
+      "/portfolio/projects/Lansum%20Etania%203BHK%20Flat/3.jpg",
+      "/portfolio/projects/Lansum%20Etania%203BHK%20Flat/4.jpg",
+      "/portfolio/projects/Lansum%20Etania%203BHK%20Flat/5.jpg",
+      "/portfolio/projects/Lansum%20Etania%203BHK%20Flat/6.jpg",
+      "/portfolio/projects/Lansum%20Etania%203BHK%20Flat/7.jpg",
+      "/portfolio/projects/Lansum%20Etania%203BHK%20Flat/8.jpg",
+      "/portfolio/projects/Lansum%20Etania%203BHK%20Flat/9.jpg",
+      "/portfolio/projects/Lansum%20Etania%203BHK%20Flat/10.jpg",
+      "/portfolio/projects/Lansum%20Etania%203BHK%20Flat/11.jpg",
+      "/portfolio/projects/Lansum%20Etania%203BHK%20Flat/12.jpg",
+      "/portfolio/projects/Lansum%20Etania%203BHK%20Flat/13.jpg",
+      "/portfolio/projects/Lansum%20Etania%203BHK%20Flat/14.jpg",
+      "/portfolio/projects/Lansum%20Etania%203BHK%20Flat/15.jpg",
+      "/portfolio/projects/Lansum%20Etania%203BHK%20Flat/16.jpg",
+      "/portfolio/projects/Lansum%20Etania%203BHK%20Flat/17.jpg",
+      "/portfolio/projects/Lansum%20Etania%203BHK%20Flat/18.jpg"
     ]
   },
   {
     "title": "Reddy Residency",
     "images": [
-      "/portfolio/projects/Reddy Residency/1.png",
-      "/portfolio/projects/Reddy Residency/2.png",
-      "/portfolio/projects/Reddy Residency/3.jpg",
-      "/portfolio/projects/Reddy Residency/4.png"
+      "/portfolio/projects/Reddy%20Residency/1.png",
+      "/portfolio/projects/Reddy%20Residency/2.png",
+      "/portfolio/projects/Reddy%20Residency/3.jpg",
+      "/portfolio/projects/Reddy%20Residency/4.png"
     ]
   },
   {
     "title": "Sharada School",
     "images": [
-      "/portfolio/projects/Sharada School/1.png",
-      "/portfolio/projects/Sharada School/2.png",
-      "/portfolio/projects/Sharada School/3.png",
-      "/portfolio/projects/Sharada School/4.png",
-      "/portfolio/projects/Sharada School/5.png",
-      "/portfolio/projects/Sharada School/6.png"
+      "/portfolio/projects/Sharada%20School/1.png",
+      "/portfolio/projects/Sharada%20School/2.png",
+      "/portfolio/projects/Sharada%20School/3.png",
+      "/portfolio/projects/Sharada%20School/4.png",
+      "/portfolio/projects/Sharada%20School/5.png",
+      "/portfolio/projects/Sharada%20School/6.png"
     ]
   },
   {
     "title": "Sri Divya Akhil Swapna CK Meadows-3BHK",
     "images": [
-      "/portfolio/projects/Sri Divya Akhil Swapna CK Meadows-3BHK/1.JPG",
-      "/portfolio/projects/Sri Divya Akhil Swapna CK Meadows-3BHK/2.JPG",
-      "/portfolio/projects/Sri Divya Akhil Swapna CK Meadows-3BHK/3.JPG",
-      "/portfolio/projects/Sri Divya Akhil Swapna CK Meadows-3BHK/4.JPG",
-      "/portfolio/projects/Sri Divya Akhil Swapna CK Meadows-3BHK/5.JPG",
-      "/portfolio/projects/Sri Divya Akhil Swapna CK Meadows-3BHK/6.JPG",
-      "/portfolio/projects/Sri Divya Akhil Swapna CK Meadows-3BHK/7.JPG",
-      "/portfolio/projects/Sri Divya Akhil Swapna CK Meadows-3BHK/8.JPG",
-      "/portfolio/projects/Sri Divya Akhil Swapna CK Meadows-3BHK/9.JPG",
-      "/portfolio/projects/Sri Divya Akhil Swapna CK Meadows-3BHK/10.JPG",
-      "/portfolio/projects/Sri Divya Akhil Swapna CK Meadows-3BHK/11.JPG"
+      "/portfolio/projects/Sri%20Divya%20Akhil%20Swapna%20CK%20Meadows-3BHK/1.JPG",
+      "/portfolio/projects/Sri%20Divya%20Akhil%20Swapna%20CK%20Meadows-3BHK/2.JPG",
+      "/portfolio/projects/Sri%20Divya%20Akhil%20Swapna%20CK%20Meadows-3BHK/3.JPG",
+      "/portfolio/projects/Sri%20Divya%20Akhil%20Swapna%20CK%20Meadows-3BHK/4.JPG",
+      "/portfolio/projects/Sri%20Divya%20Akhil%20Swapna%20CK%20Meadows-3BHK/5.JPG",
+      "/portfolio/projects/Sri%20Divya%20Akhil%20Swapna%20CK%20Meadows-3BHK/6.JPG",
+      "/portfolio/projects/Sri%20Divya%20Akhil%20Swapna%20CK%20Meadows-3BHK/7.JPG",
+      "/portfolio/projects/Sri%20Divya%20Akhil%20Swapna%20CK%20Meadows-3BHK/8.JPG",
+      "/portfolio/projects/Sri%20Divya%20Akhil%20Swapna%20CK%20Meadows-3BHK/9.JPG",
+      "/portfolio/projects/Sri%20Divya%20Akhil%20Swapna%20CK%20Meadows-3BHK/10.JPG",
+      "/portfolio/projects/Sri%20Divya%20Akhil%20Swapna%20CK%20Meadows-3BHK/11.JPG"
     ]
   },
   {
     "title": "The Modular Company",
     "images": [
-      "/portfolio/projects/The Modular Company/1.png",
-      "/portfolio/projects/The Modular Company/2.png",
-      "/portfolio/projects/The Modular Company/3.png",
-      "/portfolio/projects/The Modular Company/4.png",
-      "/portfolio/projects/The Modular Company/5.png"
+      "/portfolio/projects/The%20Modular%20Company/1.png",
+      "/portfolio/projects/The%20Modular%20Company/2.png",
+      "/portfolio/projects/The%20Modular%20Company/3.png",
+      "/portfolio/projects/The%20Modular%20Company/4.png",
+      "/portfolio/projects/The%20Modular%20Company/5.png"
     ]
   },
   {
     "title": "Vasavi Residency",
     "images": [
-      "/portfolio/projects/Vasavi Residency/1.png",
-      "/portfolio/projects/Vasavi Residency/2.png",
-      "/portfolio/projects/Vasavi Residency/3.png",
-      "/portfolio/projects/Vasavi Residency/4.png",
-      "/portfolio/projects/Vasavi Residency/5.png",
-      "/portfolio/projects/Vasavi Residency/6.png"
+      "/portfolio/projects/Vasavi%20Residency/1.png",
+      "/portfolio/projects/Vasavi%20Residency/2.png",
+      "/portfolio/projects/Vasavi%20Residency/3.png",
+      "/portfolio/projects/Vasavi%20Residency/4.png",
+      "/portfolio/projects/Vasavi%20Residency/5.png",
+      "/portfolio/projects/Vasavi%20Residency/6.png"
     ]
   }
 ]

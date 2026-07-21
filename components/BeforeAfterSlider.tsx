@@ -77,8 +77,9 @@ export default function BeforeAfterSlider({
     >
       {beforeIsPlaceholder && (
         <p id={`before-notice-${title.replace(/\s+/g, '-')}`} className="sr-only">
-          The "before" image is a visual placeholder using a grayscale and blur filter on the same
-          photo as the "after" image. A real AI-generated before photo will replace it later.
+          The &quot;before&quot; image is a visual placeholder using a grayscale and blur filter on
+          the same photo as the &quot;after&quot; image. A real AI-generated before photo will replace
+          it later.
         </p>
       )}
       {/* Comparison area */}
@@ -160,7 +161,7 @@ export default function BeforeAfterSlider({
       {beforeIsPlaceholder && (
         <p className="text-xs text-gray-400 mt-1">
           {/* TODO: drop the real AI-generated "before" image into public/portfolio/before-ai/ and set beforeIsPlaceholder=false */}
-          "Before" is a placeholder — see <code>public/portfolio/before-ai/README.md</code>
+          &quot;Before&quot; is a placeholder — see <code>public/portfolio/before-ai/README.md</code>
         </p>
       )}
     </motion.div>

@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { Phone, Mail, MapPin, Instagram, Youtube, Linkedin } from 'lucide-react'
 
 const Footer = () => {
@@ -8,7 +9,13 @@ const Footer = () => {
       <div className="container-custom section-padding">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div>
-            <h3 className="text-xl font-serif font-bold mb-4">Thrayee Studio</h3>
+            <Image
+              src="/brand/logo-white.png"
+              alt="Thrayee Studio"
+              width={1600}
+              height={1500}
+              className="mb-4 h-auto w-44 sm:w-52"
+            />
             <p className="text-gray-300 text-sm leading-relaxed">
               Premium interior design solutions for Hyderabad and Bangalore homes. Creating beautiful, functional spaces since 2015.
             </p>

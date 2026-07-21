@@ -27,7 +27,7 @@ const FinalCTA = () => {
           className="text-center max-w-3xl mx-auto mb-12"
         >
           <h2 className="heading-xl mb-6 text-warm-white">
-            Let's Design Your Dream Home
+            Let&apos;s Design Your Dream Home
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Get started with a free consultation and personalized quotation
@@ -95,7 +95,7 @@ const FinalCTA = () => {
           </a>
 
           <a
-            href="mailto:info@thrayee.com"
+            href="mailto:info@thrayeestudio.com"
             className="flex items-center gap-3 hover:text-gold transition"
           >
             <div className="w-12 h-12 rounded-full bg-olive/20 flex items-center justify-center">
@@ -103,7 +103,7 @@ const FinalCTA = () => {
             </div>
             <div className="text-left">
               <p className="text-sm text-gray-400">Email</p>
-              <p className="font-semibold">info@thrayee.com</p>
+              <p className="font-semibold">info@thrayeestudio.com</p>
             </div>
           </a>
         </motion.div>

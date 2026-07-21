@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X, Phone, MessageCircle } from 'lucide-react'
 
 const Navigation = () => {
@@ -23,6 +24,9 @@ const Navigation = () => {
     { label: 'About', href: '#about' },
     { label: 'Contact', href: '#contact' },
   ]
+  const navTextClass = isScrolled
+    ? 'text-charcoal hover:text-olive'
+    : 'text-warm-white hover:text-gold'
 
   return (
     <nav
@@ -34,8 +38,15 @@ const Navigation = () => {
     >
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="text-2xl font-serif font-bold text-charcoal flex items-center gap-2">
-            <span>Thrayee</span>
+          <Link href="/" className="flex items-center gap-3" aria-label="Thrayee Studio home">
+            <Image
+              src="/brand/logo-navbar.png"
+              alt="Thrayee Studio"
+              width={1600}
+              height={340}
+              priority
+              className={`h-10 w-auto ${isScrolled ? '' : 'brightness-0 invert md:h-11'}`}
+            />
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
@@ -43,7 +54,7 @@ const Navigation = () => {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-charcoal hover:text-olive transition-colors duration-300 text-sm font-medium"
+                className={`${navTextClass} transition-colors duration-300 text-sm font-medium`}
               >
                 {item.label}
               </a>
@@ -53,7 +64,7 @@ const Navigation = () => {
           <div className="hidden md:flex items-center gap-4">
             <a
               href="tel:+919676943494"
-              className="flex items-center gap-2 text-charcoal hover:text-olive transition-colors"
+              className={`flex items-center gap-2 transition-colors ${navTextClass}`}
               title="Call us"
               aria-label="Call Thrayee Studio at +91 9676 943 494"
             >
@@ -63,7 +74,7 @@ const Navigation = () => {
               href="https://wa.me/919676943494"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-charcoal hover:text-olive transition-colors"
+              className={`flex items-center gap-2 transition-colors ${navTextClass}`}
               title="WhatsApp"
               aria-label="WhatsApp Thrayee Studio"
             >
@@ -81,7 +92,7 @@ const Navigation = () => {
           </div>
 
           <button
-            className="md:hidden text-charcoal"
+            className={`md:hidden ${isScrolled ? 'text-charcoal' : 'text-warm-white'}`}
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
             aria-expanded={isOpen}

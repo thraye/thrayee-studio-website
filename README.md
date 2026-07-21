@@ -1,6 +1,6 @@
 # Thrayee Studio - Premium Interior Design Website
 
-A world-class, conversion-focused website for Thrayee Interior Design, an interior design company based in Hyderabad, India.
+A world-class, conversion-focused website for Thrayee Studio, an architecture, landscape, and interior design studio based in Hyderabad, India.
 
 ## Features
 
@@ -83,4 +83,4 @@ npm start
 
 ## Contact & Support
 
-For inquiries, visit [thrayee-studio.com](https://thrayee-studio.com) or contact us via WhatsApp.
+For inquiries, visit [thrayeestudio.com](https://thrayeestudio.com) or contact us via WhatsApp.

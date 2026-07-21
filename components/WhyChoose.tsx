@@ -48,7 +48,7 @@ const WhyChoose = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="heading-lg mb-4 text-charcoal">Why Choose Thrayee</h2>
+          <h2 className="heading-lg mb-4 text-charcoal">Why Choose Thrayee Studio</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             We bring transparency, quality, and expertise to every project
           </p>

@@ -1,38 +1,59 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#2C2C2C',
+}
+
 export const metadata: Metadata = {
   title: 'Thrayee Studio - Premium Interior Design Hyderabad',
-  description: 'Award-winning interior design for apartments, villas, and homes in Hyderabad. Custom designs with transparent pricing and 3D visualization.',
+  description: 'Thrayee Studio creates premium architecture, landscape, and interior design solutions for apartments, villas, and homes in Hyderabad.',
   keywords: 'interior design hyderabad, home interior design, apartment interiors, villa design, modular kitchen, false ceiling',
-  viewport: 'width=device-width, initial-scale=1',
   metadataBase: new URL('https://thrayeestudio.com'),
+  applicationName: 'Thrayee Studio',
   alternates: {
     canonical: 'https://thrayeestudio.com',
   },
+  icons: {
+    icon: [
+      { url: '/brand/favicon.ico', sizes: 'any' },
+      { url: '/brand/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/brand/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: [{ url: '/brand/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+    shortcut: ['/brand/favicon.ico'],
+  },
   openGraph: {
     title: 'Thrayee Studio - Premium Interior Design',
-    description: 'Elegant interior design solutions for Hyderabad homes',
+    description: 'Thrayee Studio designs refined architecture, landscape, and interior spaces for Hyderabad homes.',
     type: 'website',
     locale: 'en_IN',
     url: 'https://thrayeestudio.com',
     siteName: 'Thrayee Studio',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop',
+        url: '/brand/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Thrayee Studio Interior Design',
+        alt: 'Thrayee Studio brand identity',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Thrayee Studio - Premium Interior Design',
-    description: 'Award-winning interior design for Hyderabad homes',
+    description: 'Thrayee Studio designs refined architecture, landscape, and interior spaces for Hyderabad homes.',
     creator: '@thrayeestudio',
+    images: ['/brand/og-image.png'],
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black-translucent',
+    title: 'Thrayee Studio',
   },
   robots: {
     index: true,
@@ -54,15 +75,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="theme-color" content="#2C2C2C" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href="https://thrayeestudio.com" />
-      </head>
       <body className="bg-warm-white">
         <Navigation />
         <main>

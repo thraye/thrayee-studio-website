@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 
 const Hero = () => {
@@ -32,6 +33,14 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="max-w-3xl mx-auto"
         >
+          <Image
+            src="/brand/logo-white.png"
+            alt="Thrayee Studio"
+            width={1600}
+            height={1500}
+            priority
+            className="mx-auto mb-8 h-auto w-40 sm:w-48 md:w-56"
+          />
           <h1 className="heading-xl mb-6 text-white">
             Designed Around Your Lifestyle
           </h1>

@@ -14,7 +14,7 @@ const Testimonials = () => {
     {
       name: 'Priya Sharma',
       location: 'Kondapur',
-      text: 'Thrayee turned our apartment into our dream home! The attention to detail and transparent pricing was impressive.',
+      text: 'Thrayee Studio turned our apartment into our dream home! The attention to detail and transparent pricing was impressive.',
       rating: 5,
       image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Priya',
     },
@@ -93,7 +93,7 @@ const Testimonials = () => {
                   <span key={i} className="text-gold">★</span>
                 ))}
               </div>
-              <p className="text-gray-700 italic leading-relaxed">"{testimonial.text}"</p>
+              <p className="text-gray-700 italic leading-relaxed">&ldquo;{testimonial.text}&rdquo;</p>
             </motion.div>
           ))}
         </motion.div>

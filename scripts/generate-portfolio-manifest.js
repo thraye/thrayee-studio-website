@@ -9,7 +9,7 @@ const path = require('path')
 const projectsDir = path.join(process.cwd(), 'public', 'portfolio', 'projects')
 const outputPath = path.join(process.cwd(), 'lib', 'portfolioManifest.ts')
 
-const IMAGE_EXTS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.avif', '.gif'])
+const IMAGE_EXTS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.avif'])
 const filenameSorter = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' })
 
 const toPublicPath = (...segments) =>

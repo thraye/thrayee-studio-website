@@ -69,14 +69,19 @@ export default function ProjectCarousel({ images, alt, cardIndex = 0 }: ProjectC
     (fromIndex: number, dir: 1 | -1) => {
       if (imageCount === 0) return 0
       if (availableIndices.length === 0) return Math.min(Math.max(fromIndex, 0), imageCount - 1)
+      const normalizedIndex = (fromIndex + imageCount) % imageCount
+      if (availableIndices.includes(normalizedIndex)) return normalizedIndex
 
-      for (let step = 0; step < imageCount; step += 1) {
-        const candidate = (fromIndex + step * dir + imageCount) % imageCount
-        if (!failedMap[candidate]) return candidate
+      if (dir === 1) {
+        return availableIndices.find((index) => index >= normalizedIndex) ?? availableIndices[0]
       }
-      return availableIndices[0]
+
+      const previousIndex = [...availableIndices]
+        .reverse()
+        .find((index) => index <= normalizedIndex)
+      return previousIndex ?? availableIndices[availableIndices.length - 1]
     },
-    [availableIndices, failedMap, imageCount]
+    [availableIndices, imageCount]
   )
 
   const goTo = useCallback(
@@ -110,7 +115,8 @@ export default function ProjectCarousel({ images, alt, cardIndex = 0 }: ProjectC
     if (typeof window === 'undefined' || imageCount <= 1 || availableIndices.length <= 1) return
     const nextIndex = findNextAvailableIndex(currentIndex + 1, 1)
     const prevIndex = findNextAvailableIndex(currentIndex - 1, -1)
-    ;[nextIndex, prevIndex].forEach((index) => {
+    const preloadTargets = [nextIndex, prevIndex]
+    preloadTargets.forEach((index) => {
       const src = filteredImages[index]
       if (!src || failedMap[index]) return
       const preloadImage = new window.Image()

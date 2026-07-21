@@ -14,11 +14,10 @@ const Footer = () => {
               alt="Thrayee Studio"
               width={1600}
               height={1500}
-              className="mb-4 h-auto w-44 sm:w-52"
+              className="mb-1 h-auto w-44 sm:w-52"
             />
-            <p className="mb-3 text-xs tracking-[0.22em] text-gray-300">
-              INTERIOR DESIGN
-            </p>
+            <p className="text-gold text-xs font-medium uppercase tracking-widest mb-1">Interior Design</p>
+            <p className="text-gray-400 text-xs italic mb-3">Designing beyond walls</p>
             <p className="text-gray-300 text-sm leading-relaxed">
               Premium interior design solutions for Hyderabad and Bangalore homes. Creating beautiful, functional spaces since 2015.
             </p>

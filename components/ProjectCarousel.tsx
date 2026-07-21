@@ -144,7 +144,11 @@ export default function ProjectCarousel({ images, alt, cardIndex = 0 }: ProjectC
     const diffY = dragStartY.current - e.clientY
     // Only treat as a horizontal swipe when horizontal movement dominates
     if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
-      diffX > 0 ? goNext() : goPrev()
+      if (diffX > 0) {
+        goNext()
+      } else {
+        goPrev()
+      }
     }
   }
 

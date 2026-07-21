@@ -19,4 +19,6 @@ This directory contains the checked-in website branding assets for Thrayee Studi
 - `og-image.png` — Open Graph / social preview image
 - `favicon.ico`, `favicon-32x32.png`, `favicon-16x16.png`, `apple-touch-icon.png` — favicon set derived from the icon mark
 
-These variants are pre-generated raster files. The only runtime filter use in the app is a light/dark inversion of the compact monochrome navbar mark so it can stay legible over both the transparent hero state and the scrolled light navigation state.
+These variants are pre-generated raster files. The vertical lockups (`logo-primary.png`, `logo-dark.png`, `logo-white.png`, and `logo-monochrome.png`) are trimmed to the icon + THRAYEE STUDIO wordmark area so category copy is not baked into the image. The site now renders `INTERIOR DESIGN` as live text in UI components where needed for current positioning.
+
+The only runtime filter use in the app is a light/dark inversion of the compact monochrome navbar mark so it can stay legible over both the transparent hero state and the scrolled light navigation state.

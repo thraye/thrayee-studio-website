@@ -16,6 +16,9 @@ const Footer = () => {
               height={1500}
               className="mb-4 h-auto w-44 sm:w-52"
             />
+            <p className="mb-3 text-xs tracking-[0.22em] text-gray-300">
+              INTERIOR DESIGN
+            </p>
             <p className="text-gray-300 text-sm leading-relaxed">
               Premium interior design solutions for Hyderabad and Bangalore homes. Creating beautiful, functional spaces since 2015.
             </p>

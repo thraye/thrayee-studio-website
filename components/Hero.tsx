@@ -41,6 +41,9 @@ const Hero = () => {
             priority
             className="mx-auto mb-8 h-auto w-40 sm:w-48 md:w-56"
           />
+          <p className="mb-6 text-sm sm:text-base font-medium tracking-[0.25em] text-gray-100">
+            INTERIOR DESIGN
+          </p>
           <h1 className="heading-xl mb-6 text-white">
             Designed Around Your Lifestyle
           </h1>

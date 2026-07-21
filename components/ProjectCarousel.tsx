@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
@@ -21,14 +21,25 @@ const slideVariants = {
 }
 
 export default function ProjectCarousel({ images, alt, cardIndex = 0 }: ProjectCarouselProps) {
+  const filteredImages = useMemo(
+    () => images.filter((src) => typeof src === 'string' && src.trim().length > 0),
+    [images]
+  )
   const [currentIndex, setCurrentIndex] = useState(0)
   const [direction, setDirection] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
+  const [loadedMap, setLoadedMap] = useState<Record<number, boolean>>({})
+  const [failedMap, setFailedMap] = useState<Record<number, boolean>>({})
   const dragStartX = useRef(0)
   const dragStartY = useRef(0)
   const isDragging = useRef(false)
   const containerRef = useRef<HTMLDivElement>(null)
   const isInViewRef = useRef(false)
+  const imageCount = filteredImages.length
+  const availableIndices = useMemo(
+    () => filteredImages.map((_, index) => index).filter((index) => !failedMap[index]),
+    [filteredImages, failedMap]
+  )
 
   // Pause carousel when not visible in the viewport (optional IntersectionObserver)
   useEffect(() => {
@@ -47,26 +58,78 @@ export default function ProjectCarousel({ images, alt, cardIndex = 0 }: ProjectC
     return () => observer.disconnect()
   }, [])
 
-  const goTo = useCallback(
-    (newIndex: number, dir: number) => {
-      if (images.length === 0) return
-      setDirection(dir)
-      setCurrentIndex((newIndex + images.length) % images.length)
+  useEffect(() => {
+    setCurrentIndex((prev) => {
+      if (imageCount === 0) return 0
+      return Math.min(prev, imageCount - 1)
+    })
+  }, [imageCount])
+
+  const findNextAvailableIndex = useCallback(
+    (fromIndex: number, dir: 1 | -1) => {
+      if (imageCount === 0) return 0
+      if (availableIndices.length === 0) return Math.min(Math.max(fromIndex, 0), imageCount - 1)
+      const normalizedIndex = (fromIndex + imageCount) % imageCount
+      if (availableIndices.includes(normalizedIndex)) return normalizedIndex
+
+      if (dir === 1) {
+        return availableIndices.find((index) => index >= normalizedIndex) ?? availableIndices[0]
+      }
+
+      const previousIndex = [...availableIndices]
+        .reverse()
+        .find((index) => index <= normalizedIndex)
+      return previousIndex ?? availableIndices[availableIndices.length - 1]
     },
-    [images.length]
+    [availableIndices, imageCount]
+  )
+
+  const goTo = useCallback(
+    (newIndex: number, dir: 1 | -1) => {
+      if (imageCount === 0 || availableIndices.length <= 1) return
+      const wrappedIndex = (newIndex + imageCount) % imageCount
+      setDirection(dir)
+      setCurrentIndex(findNextAvailableIndex(wrappedIndex, dir))
+    },
+    [availableIndices.length, findNextAvailableIndex, imageCount]
   )
 
   const goNext = useCallback(() => goTo(currentIndex + 1, 1), [currentIndex, goTo])
   const goPrev = useCallback(() => goTo(currentIndex - 1, -1), [currentIndex, goTo])
 
+  useEffect(() => {
+    if (availableIndices.length === 0 || !failedMap[currentIndex]) return
+    setCurrentIndex(findNextAvailableIndex(currentIndex + 1, 1))
+  }, [availableIndices.length, currentIndex, failedMap, findNextAvailableIndex])
+
   // Auto-play — paused on hover/focus or when off-screen
   useEffect(() => {
-    if (isPaused || images.length <= 1) return
+    if (isPaused || availableIndices.length <= 1) return
     const interval = setInterval(() => {
       if (isInViewRef.current) goNext()
     }, AUTO_SLIDE_INTERVAL)
     return () => clearInterval(interval)
-  }, [isPaused, goNext, images.length])
+  }, [availableIndices.length, goNext, isPaused])
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || imageCount <= 1 || availableIndices.length <= 1) return
+    const nextIndex = findNextAvailableIndex(currentIndex + 1, 1)
+    const prevIndex = findNextAvailableIndex(currentIndex - 1, -1)
+    const preloadTargets = [nextIndex, prevIndex]
+    preloadTargets.forEach((index) => {
+      const src = filteredImages[index]
+      if (!src || failedMap[index]) return
+      const preloadImage = new window.Image()
+      preloadImage.src = src
+    })
+  }, [
+    availableIndices.length,
+    currentIndex,
+    failedMap,
+    filteredImages,
+    findNextAvailableIndex,
+    imageCount,
+  ])
 
   const handlePointerDown = (e: React.PointerEvent) => {
     isDragging.current = true
@@ -85,9 +148,23 @@ export default function ProjectCarousel({ images, alt, cardIndex = 0 }: ProjectC
     }
   }
 
-  if (images.length === 0) return null
+  if (imageCount === 0) {
+    return (
+      <div className="relative aspect-[4/3] bg-light-gray overflow-hidden">
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-gray-500">
+          <span className="text-2xl" aria-hidden="true">
+            🖼️
+          </span>
+          <span className="text-sm font-medium">Image unavailable</span>
+        </div>
+      </div>
+    )
+  }
 
   const isFirstCard = cardIndex === 0
+  const isCurrentSlideFailed = !!failedMap[currentIndex]
+  const isCurrentSlideLoaded = !!loadedMap[currentIndex]
+  const canNavigate = availableIndices.length > 1
 
   return (
     <div
@@ -112,21 +189,41 @@ export default function ProjectCarousel({ images, alt, cardIndex = 0 }: ProjectC
           transition={{ duration: 0.4, ease: 'easeInOut' }}
           className="absolute inset-0"
         >
-          <Image
-            src={images[currentIndex]}
-            alt={`${alt} — image ${currentIndex + 1}`}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 50vw"
-            // Only treat the very first image of the first card as priority; lazy-load everything else
-            priority={isFirstCard && currentIndex === 0}
-            loading={isFirstCard && currentIndex === 0 ? 'eager' : 'lazy'}
-          />
+          {isCurrentSlideFailed ? (
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-light-gray text-gray-500">
+              <span className="text-2xl" aria-hidden="true">
+                🖼️
+              </span>
+              <span className="text-sm font-medium">Image unavailable</span>
+            </div>
+          ) : (
+            <>
+              <Image
+                src={filteredImages[currentIndex]}
+                alt={`${alt} — image ${currentIndex + 1}`}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                // Only treat the very first image of the first card as priority; lazy-load everything else
+                priority={isFirstCard && currentIndex === 0}
+                loading={isFirstCard && currentIndex === 0 ? 'eager' : 'lazy'}
+                onLoad={() => {
+                  setLoadedMap((prev) => ({ ...prev, [currentIndex]: true }))
+                }}
+                onError={() => {
+                  setFailedMap((prev) => ({ ...prev, [currentIndex]: true }))
+                }}
+              />
+              {!isCurrentSlideLoaded && (
+                <div className="absolute inset-0 animate-pulse bg-light-gray" aria-hidden="true" />
+              )}
+            </>
+          )}
         </motion.div>
       </AnimatePresence>
 
       {/* Prev / Next arrows */}
-      {images.length > 1 && (
+      {canNavigate && (
         <>
           <button
             onClick={(e) => {
@@ -152,13 +249,13 @@ export default function ProjectCarousel({ images, alt, cardIndex = 0 }: ProjectC
       )}
 
       {/* Dot indicators */}
-      {images.length > 1 && (
+      {canNavigate && (
         <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-1.5 pointer-events-none">
-          {images.map((_, i) => (
+          {availableIndices.map((index) => (
             <span
-              key={i}
+              key={index}
               className={`h-1.5 rounded-full bg-white transition-all ${
-                i === currentIndex ? 'w-4 opacity-100' : 'w-1.5 opacity-50'
+                index === currentIndex ? 'w-4 opacity-100' : 'w-1.5 opacity-50'
               }`}
             />
           ))}

@@ -18,6 +18,8 @@ type ProjectMeta = {
 
 const phoneNumber = '919676943494'
 const whatsappBase = `https://wa.me/${phoneNumber}`
+const sanitizeProjectImages = (images: string[]) =>
+  images.filter((img) => typeof img === 'string' && img.trim().length > 0)
 
 // Known project metadata keyed by folder/title name.
 // Projects discovered by the manifest that are not listed here will receive sensible defaults.
@@ -126,7 +128,7 @@ const allProjects = portfolioManifest.map((entry) => {
   const meta = projectMetadata[entry.title]
   return {
     title: entry.title,
-    images: entry.images,
+    images: sanitizeProjectImages(entry.images),
     category: meta?.category ?? ('modern' as Category),
     location: meta?.location ?? 'Hyderabad',
     cost: meta?.cost ?? 'Contact for pricing',
@@ -254,4 +256,3 @@ const Portfolio = () => {
 }
 
 export default Portfolio
-

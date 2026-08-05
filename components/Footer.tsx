@@ -49,11 +49,11 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-2">
                 <Phone size={16} className="mt-1" />
-                <a href="tel:+919676943494" className="hover:text-gold transition" title="Call us">+91 9676 943 494</a>
+                <a href="tel:+919676943498" className="hover:text-gold transition" title="Call us">+91 9676 943 498</a>
               </div>
               <div className="flex items-start gap-2">
                 <Mail size={16} className="mt-1" />
-                <a href="mailto:info@thrayeestudio.com" className="hover:text-gold transition" title="Email us">info@thrayeestudio.com</a>
+                <a href="mailto:hello@thrayeestudio.in" className="hover:text-gold transition" title="Email us">hello@thrayeestudio.in</a>
               </div>
               <div className="flex items-start gap-2">
                 <MapPin size={16} className="mt-1" />
@@ -61,7 +61,7 @@ const Footer = () => {
               </div>
             </div>
             <a
-              href="https://wa.me/919676943494?text=Hi%20Thrayee%20Studio%2C%20I%20need%20interior%20design%20consultation."
+              href="https://wa.me/919676943498?text=Hi%20Thrayee%20Studio%2C%20I%20need%20interior%20design%20consultation."
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary text-sm mt-4 inline-block"
@@ -78,13 +78,13 @@ const Footer = () => {
               © 2026 Thrayee Studio. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
-              <a href="https://instagram.com/thrayeestudio" className="hover:text-gold transition" title="Instagram" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer">
+              <a href="https://instagram.com/thrayee_studio" className="hover:text-gold transition" title="Instagram" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer">
                 <Instagram size={20} />
               </a>
-              <a href="https://youtube.com/@thrayeestudio" className="hover:text-gold transition" title="YouTube" aria-label="Subscribe on YouTube" target="_blank" rel="noopener noreferrer">
+              <a href="https://youtube.com/@Thrayee-Studio" className="hover:text-gold transition" title="YouTube" aria-label="Subscribe on YouTube" target="_blank" rel="noopener noreferrer">
                 <Youtube size={20} />
               </a>
-              <a href="https://linkedin.com/company/thrayee-studio" className="hover:text-gold transition" title="LinkedIn" aria-label="Follow us on LinkedIn" target="_blank" rel="noopener noreferrer">
+              <a href="https://linkedin.com/in/thrayee-studio" className="hover:text-gold transition" title="LinkedIn" aria-label="Follow us on LinkedIn" target="_blank" rel="noopener noreferrer">
                 <Linkedin size={20} />
               </a>
             </div>

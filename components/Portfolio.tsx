@@ -16,7 +16,7 @@ type ProjectMeta = {
   whatsappText: string
 }
 
-const phoneNumber = '919676943494'
+const phoneNumber = '919676943498'
 const whatsappBase = `https://wa.me/${phoneNumber}`
 const sanitizeProjectImages = (images: string[]) =>
   images.filter((img) => typeof img === 'string' && img.trim().length > 0)

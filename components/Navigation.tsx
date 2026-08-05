@@ -63,15 +63,15 @@ const Navigation = () => {
 
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="tel:+919676943494"
+              href="tel:+919676943498"
               className={`flex items-center gap-2 transition-colors ${navTextClass}`}
               title="Call us"
-              aria-label="Call Thrayee Studio at +91 9676 943 494"
+              aria-label="Call Thrayee Studio at +91 9676 943 498"
             >
               <Phone size={18} />
             </a>
             <a
-              href="https://wa.me/919676943494"
+              href="https://wa.me/919676943498"
               target="_blank"
               rel="noopener noreferrer"
               className={`flex items-center gap-2 transition-colors ${navTextClass}`}
@@ -81,7 +81,7 @@ const Navigation = () => {
               <MessageCircle size={18} />
             </a>
             <a
-              href="https://wa.me/919676943494?text=Hi%20Thrayee%20Studio%2C%20I%20would%20like%20to%20book%20a%20consultation."
+              href="https://wa.me/919676943498?text=Hi%20Thrayee%20Studio%2C%20I%20would%20like%20to%20book%20a%20consultation."
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary text-sm"
@@ -115,13 +115,13 @@ const Navigation = () => {
             ))}
             <div className="px-4 py-3 border-t border-light-gray mt-2 flex gap-2">
               <a
-                href="tel:+919676943494"
+                href="tel:+919676943498"
                 className="btn w-1/2 text-sm border border-charcoal text-charcoal text-center"
               >
                 Call
               </a>
               <a
-                href="https://wa.me/919676943494?text=Hi%20Thrayee%20Studio%2C%20I%20would%20like%20to%20book%20a%20consultation."
+                href="https://wa.me/919676943498?text=Hi%20Thrayee%20Studio%2C%20I%20would%20like%20to%20book%20a%20consultation."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary w-1/2 text-sm text-center"

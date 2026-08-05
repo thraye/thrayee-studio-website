@@ -42,7 +42,7 @@ const FinalCTA = () => {
           className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto mb-12"
         >
           <a
-            href="https://wa.me/919676943494?text=Hi%20Thrayee%20Studio%2C%20I%20would%20like%20to%20book%20a%20free%20consultation."
+            href="https://wa.me/919676943498?text=Hi%20Thrayee%20Studio%2C%20I%20would%20like%20to%20book%20a%20free%20consultation."
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary px-8 py-4 text-lg font-semibold text-center"
@@ -50,7 +50,7 @@ const FinalCTA = () => {
             Book Free Consultation
           </a>
           <a
-            href="https://wa.me/919676943494?text=Hi%20Thrayee%20Studio%2C%20I%20would%20like%20to%20request%20a%20quotation."
+            href="https://wa.me/919676943498?text=Hi%20Thrayee%20Studio%2C%20I%20would%20like%20to%20request%20a%20quotation."
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-gold px-8 py-4 text-lg font-semibold text-center"
@@ -67,7 +67,7 @@ const FinalCTA = () => {
           className="flex flex-wrap justify-center gap-8"
         >
           <a
-            href="tel:+919676943494"
+            href="tel:+919676943498"
             className="flex items-center gap-3 hover:text-gold transition"
           >
             <div className="w-12 h-12 rounded-full bg-olive/20 flex items-center justify-center">
@@ -75,12 +75,12 @@ const FinalCTA = () => {
             </div>
             <div className="text-left">
               <p className="text-sm text-gray-400">Call Now</p>
-              <p className="font-semibold">+91 9676 943 494</p>
+              <p className="font-semibold">+91 9676 943 498</p>
             </div>
           </a>
 
           <a
-            href="https://wa.me/919676943494?text=Hi%20Thrayee%20Studio%2C%20I%20need%20interior%20design%20consultation."
+            href="https://wa.me/919676943498?text=Hi%20Thrayee%20Studio%2C%20I%20need%20interior%20design%20consultation."
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 hover:text-gold transition"
@@ -95,7 +95,7 @@ const FinalCTA = () => {
           </a>
 
           <a
-            href="mailto:info@thrayeestudio.com"
+            href="mailto:hello@thrayeestudio.in"
             className="flex items-center gap-3 hover:text-gold transition"
           >
             <div className="w-12 h-12 rounded-full bg-olive/20 flex items-center justify-center">
@@ -103,7 +103,7 @@ const FinalCTA = () => {
             </div>
             <div className="text-left">
               <p className="text-sm text-gray-400">Email</p>
-              <p className="font-semibold">info@thrayeestudio.com</p>
+              <p className="font-semibold">hello@thrayeestudio.in</p>
             </div>
           </a>
         </motion.div>

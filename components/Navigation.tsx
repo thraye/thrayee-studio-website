@@ -45,7 +45,7 @@ const Navigation = () => {
               width={1600}
               height={340}
               priority
-              className={`h-10 w-auto ${isScrolled ? '' : 'brightness-0 invert md:h-11'}`}
+              className={`h-10 w-auto dark:invert-0 ${isScrolled ? '' : 'md:h-11'}`}
             />
           </Link>
 
